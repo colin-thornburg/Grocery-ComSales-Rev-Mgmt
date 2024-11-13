@@ -1,0 +1,32 @@
+models:
+  - name: mart_product_performance
+    description: This model provides a comprehensive analysis of product performance by aggregating order and delivery data. It includes metrics such as total orders, total quantity sold, total revenue generated, average delivery delay, and total delivery cost, categorized by product and pricing tier.
+    columns:
+      - name: product_id
+        description: A unique identifier for each product.
+        data_tests:
+          - not_null
+      - name: tier_name
+        description: The pricing tier associated with the product.
+        data_tests:
+          - not_null
+      - name: total_orders
+        description: The total number of distinct orders for the product.
+        data_tests:
+          - not_null
+      - name: total_quantity
+        description: The total quantity of the product sold.
+        data_tests:
+          - not_null
+      - name: total_revenue
+        description: The total revenue generated from the product sales.
+        data_tests:
+          - not_null
+      - name: avg_delivery_delay
+        description: The average delay in delivery time for the product, measured in minutes.
+        data_tests:
+          - not_null
+      - name: total_delivery_cost
+        description: The total cost incurred for delivering the product.
+        data_tests:
+          - not_null
