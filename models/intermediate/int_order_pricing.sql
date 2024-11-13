@@ -1,5 +1,6 @@
 SELECT
     o.order_id,
+    o.delivery_id,
     o.customer_id,
     o.product_id,
     o.quantity,
