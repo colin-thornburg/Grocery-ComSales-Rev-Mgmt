@@ -1,0 +1,29 @@
+models:
+  - name: stg_revenue__pricing_tiers
+    description: This model extracts and structures pricing tier information for products, including base prices and applicable quantity ranges, to facilitate revenue analysis.
+    columns:
+      - name: product_id
+        description: A unique identifier for each product.
+        data_tests:
+          - unique
+          - not_null
+      - name: tier_name
+        description: The name of the pricing tier associated with the product.
+        data_tests:
+          - not_null
+      - name: base_price
+        description: The base price of the product in the specified pricing tier.
+        data_tests:
+          - not_null
+      - name: min_quantity
+        description: The minimum quantity required to qualify for the pricing tier.
+        data_tests:
+          - not_null
+      - name: max_quantity
+        description: The maximum quantity allowed for the pricing tier.
+        data_tests:
+          - not_null
+      - name: effective_date
+        description: The date from which the pricing tier is effective.
+        data_tests:
+          - not_null
